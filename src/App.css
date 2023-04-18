@@ -72,6 +72,13 @@
   text-align: center;
 }
 
+.icones {
+  width: 37px;
+  height: 24px;
+  border-radius: 20px;
+background-color: rgba(191, 170, 143, 0.3);
+}
+
 a {
   color: #333;
 }

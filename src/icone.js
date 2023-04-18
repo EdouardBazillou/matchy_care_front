@@ -18,61 +18,61 @@ function Icone() {
   return (
     <div className="besoin">
       <div className="icon-text-container"></div>
-      <p>
+      <p class="icones">
         <a href="#" onClick>
           <FaAccessibleIcon />
         </a>
         mobilite
       </p>
-      <p>
+      <p class="icones">
         <a href="2" onClick>
           <MdSoupKitchen />
         </a>
         repas
       </p>
-      <p>
+      <p class="icones">
         <a href="3" onClick>
           <MdOutlineCleaningServices />
         </a>
         Entretient
       </p>
-      <p>
+      <p class="icones" >
         <a href="5" onClick>
           <FaToilet />
         </a>
         Change
       </p>
-      <p>
+      <p class="icones">
         <a href="4" onClick>
           <MdFitnessCenter />
         </a>
         Réeducation
       </p>
-      <p>
+      <p class="icones">
         <a href="2" onClick>
           <FaBath />
         </a>
         Toilette
       </p>
-      <p>
+      <p class="icones">
         <a href="3" onClick>
           <MdOutlineHealthAndSafety />
         </a>
         Soins
       </p>
-      <p>
+      <p class="icones">
         <a href="1" onClick>
           <MdOutlineMedication />
         </a>
         Traitement
       </p>
-      <p>
+      <p class="icones">
         <a href="9" onClick>
           <FaUserFriends />
         </a>
         Compagnie
       </p>
-      <p>
+      <p class="icones">
         <a href="o" onClick>
           <MdOutlineDirectionsCarFilled />
         </a>
