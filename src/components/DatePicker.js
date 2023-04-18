@@ -5,9 +5,10 @@ import "react-datepicker/dist/react-datepicker.css";
 function ReactDatePicker() {
   const [selectedDate, setSelectedDate] = useState(null);
   return (
-    <div>
+    <div className="input-search">
+      <div className="title-input-search">Date</div>
       <DatePicker
-        className="search_input"
+        className="datepicker"
         placeholderText="Quand ?"
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}

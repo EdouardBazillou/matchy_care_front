@@ -5,9 +5,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Icone from "../icone";
 import SearchBar from "../components/searchbar";
-import ReactDatePicker from "../components/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { FaSistrix } from "react-icons/fa";
 
 function Accueil() {
   return (
@@ -39,13 +37,7 @@ function Accueil() {
       <br></br>
       <br></br>
       <br></br>
-      <div className="searchbar" type="text">
-        <SearchBar />
-        <ReactDatePicker />
-        <a className="loupe" href="#" onClick>
-          <FaSistrix />
-        </a>
-      </div>
+      <SearchBar />
       <br></br>
       <br></br>
       <br></br>

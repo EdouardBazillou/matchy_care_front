@@ -76,34 +76,72 @@
 a {
   color: #333;
 }
-
+/* barre inputs ville, besoin et date */
 .searchbar {
-  display: flex;
-  align-items: center;
+  display: flex; 
+  align-items: center; 
   justify-content: center;
-  text-align: center;
+  text-align: center; 
+ 
 }
-
+/* input ville, besoin et date */
 .search_input {
   border-style: none;
   font-size: 16px;
   color: #333;
   background-color: #fff;
   padding: 6px 12px;
+  display: flex;
+  
+ 
+flex-wrap: wrap;
+  align-items: center;
 }
-
+/* icon recherche */
 .loupe {
   font-size: 20px;
   line-height: 8px;
   background-color: #5e99c5;
   border-radius: 50%;
   display: flex;
-  margin: 0%;
+  margin-top: 1.5%;
   padding: 0.5%;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   position: relative;
- 
   color: white;
   font-family: cursive;
 }
+/* barre icons */
+
+.titles{
+  justify-content: space-evenly;
+  display: flex;
+  line-height: 1%;
+}
+.childtitles1{
+  padding-left: 8.5%;
+}
+.childtitles2{
+  padding-right:2.5%;
+}
+
+.childtitles3{
+  padding-right: 23.5%;
+}
+
+.datepicker{
+  border-style: none;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding: 6px 12px;
+  display: flex;
+
+  
+}
+.title-input-search{
+  margin-right: 71%;
+  font-weight: bold;
+}
+
