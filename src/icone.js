@@ -18,7 +18,7 @@ function Icone() {
   return (
     <div className="besoin">
       <div className="icon-text-container"></div>
-      <div>
+      <div class="icones">
         <a href="#" onClick>
           <FaAccessibleIcon />
         </a>
