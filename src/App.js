@@ -10,6 +10,26 @@ const router = createBrowserRouter([
     element: <Accueil />,
     errorElement: <Error />,
   },
+  {
+    path: "/registerPatient",
+    element: <Accueil />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/registerPro",
+    element: <Accueil />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/login",
+    element: <Accueil />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/profile",
+    element: <Accueil />,
+    errorElement: <Error />,
+  },
 ]);
 
 function App() {

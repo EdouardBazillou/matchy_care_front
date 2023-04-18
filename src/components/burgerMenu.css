@@ -1,0 +1,66 @@
+/* burgerMenu.css */
+.menu {
+  position: relative;
+}
+
+/* Style du bouton du burger menu */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style des traits du burger menu */
+span {
+  background-color: #333; /* Couleur des traits */
+  width: 30px;
+  height: 2px;
+  margin-bottom: 15%;
+  transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+/* Animation du burger menu lorsqu'il est ouvert */
+.open span:first-child {
+  transform: rotate(45deg) translate(30%, 30%);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:last-child {
+  transform: rotate(-45deg) translate(30%, -30%);
+}
+
+/* Style du menu affiché/masqué */
+nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff; /* Couleur du fond du menu */
+  padding: 18%;
+  border: 1px solid #333; /* Bordure du menu */
+  border-top: none;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0; /* Par défaut, le menu est masqué */
+  visibility: hidden; /* Par défaut, le menu est invisible */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition pour l'animation */
+}
+
+/* Affichage du menu lorsqu'il est ouvert */
+.open + nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.links {
+  display: contents;
+  color: #333;
+}
