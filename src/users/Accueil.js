@@ -42,7 +42,7 @@ function Accueil() {
       <div className="searchbar" type="text">
         <SearchBar />
         <ReactDatePicker />
-        <a href="#" onClick>
+        <a className="loupe" href="#" onClick>
           <FaSistrix />
         </a>
       </div>
