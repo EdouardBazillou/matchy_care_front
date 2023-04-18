@@ -11,12 +11,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
-<<<<<<< HEAD
     "react-calendar": "^4.2.1",
     "react-datepicker": "^4.11.0",
-=======
-    "react-burger-menu": "^3.0.9",
->>>>>>> f3fd034a8578292ddf7152ce3377cb6816ef077e
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",

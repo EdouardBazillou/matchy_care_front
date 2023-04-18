@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Icone from "../icone";
+import SearchBars from "../components/searchbar";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function Accueil() {
   return (
@@ -34,6 +37,10 @@ function Accueil() {
       </div>
       <br></br>
       <br></br>
+      <div>
+        <SearchBars />
+        <ReactDatePicker />
+      </div>
       <div className="icone">
         <Icone />
       </div>
