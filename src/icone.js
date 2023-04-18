@@ -18,66 +18,66 @@ function Icone() {
   return (
     <div className="besoin">
       <div className="icon-text-container"></div>
-      <p>
+      <div class="icones">
         <a href="#" onClick>
           <FaAccessibleIcon />
         </a>
-        mobilite
-      </p>
-      <p>
+        <p> mobilite</p>
+      </div>
+      <div>
         <a href="2" onClick>
           <MdSoupKitchen />
         </a>
-        repas
-      </p>
-      <p>
+        <p>repas</p>
+      </div>
+      <div>
         <a href="3" onClick>
           <MdOutlineCleaningServices />
         </a>
-        Entretient
-      </p>
-      <p>
+        <p>Entretient</p>
+      </div>
+      <div>
         <a href="5" onClick>
           <FaToilet />
         </a>
-        Change
-      </p>
-      <p>
+        <p>Change</p>
+      </div>
+      <div>
         <a href="4" onClick>
           <MdFitnessCenter />
         </a>
-        Réeducation
-      </p>
-      <p>
+        <p>Réeducation</p>
+      </div>
+      <div>
         <a href="2" onClick>
           <FaBath />
         </a>
-        Toilette
-      </p>
-      <p>
+        <p>Toilette</p>
+      </div>
+      <div>
         <a href="3" onClick>
           <MdOutlineHealthAndSafety />
         </a>
-        Soins
-      </p>
-      <p>
+        <p>Soins</p>
+      </div>
+      <div>
         <a href="1" onClick>
           <MdOutlineMedication />
         </a>
-        Traitement
-      </p>
-      <p>
+        <p>Traitement</p>
+      </div>
+      <div>
         <a href="9" onClick>
           <FaUserFriends />
         </a>
-        Compagnie
-      </p>
-      <p>
+        <p>Compagnie</p>
+      </div>
+      <div>
         <a href="o" onClick>
           <MdOutlineDirectionsCarFilled />
         </a>
-        Transport
-      </p>
+        <p>Transport</p>
+      </div>
     </div>
   );
 }
