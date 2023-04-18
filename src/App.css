@@ -91,3 +91,19 @@ a {
   background-color: #fff;
   padding: 6px 12px;
 }
+
+.loupe {
+  font-size: 20px;
+  line-height: 8px;
+  background-color: #5e99c5;
+  border-radius: 50%;
+  display: flex;
+  margin: 0%;
+  padding: 0.5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  position: relative;
+ 
+  color: white;
+  font-family: cursive;
+}
