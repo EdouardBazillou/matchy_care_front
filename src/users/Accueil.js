@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import SearchBar from "../components/searchbar";
+import DatePicker from "../components/DatePicker";
+import { FaSistrix } from "react-icons/fa";
+function Accueil() {
+  return (
+    <div>
+      <h1>Matchy Care</h1>
+      <div className="searchbar" type="text">
+        <SearchBar />
+        <DatePicker />
+        <a href="#" onClick>
+          <FaSistrix />
+        </a>
+=======
 import React from "react";
 import BurgerMenu from "../components/burgerMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,6 +46,7 @@ function Accueil() {
             </div>
           </div>
         </div>
+>>>>>>> f3fd034a8578292ddf7152ce3377cb6816ef077e
       </div>
       <br></br>
       <br></br>
