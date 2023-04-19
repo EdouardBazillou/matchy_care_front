@@ -46,7 +46,13 @@ function Login() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <div className="loginPage">
+        <h1>Bienvenue Sur Matchy Care</h1>
+        <h2>Veuillez Vous Connectez</h2>
+        <br></br>
+        <br></br>
+      </div>
+      <form onSubmit={handleSubmit} className="loginForm">
         <div>
           <input
             type="text"
