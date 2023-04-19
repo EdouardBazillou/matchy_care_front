@@ -3,6 +3,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./components/error";
 import Accueil from "./users/Accueil";
+import Login from "./users/login";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Accueil />,
+    element: <Login />,
     errorElement: <Error />,
   },
   {
