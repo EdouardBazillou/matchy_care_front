@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Icone from "../icone";
 import SearchBar from "../components/searchbar";
 import "react-datepicker/dist/react-datepicker.css";
+import FecthAccueil from "../components/fetchAccueil";
 
 function Accueil() {
   return (
@@ -43,6 +44,9 @@ function Accueil() {
       <br></br>
       <div className="icone">
         <Icone />
+      </div>
+      <div>
+        <FecthAccueil />
       </div>
     </div>
   );
