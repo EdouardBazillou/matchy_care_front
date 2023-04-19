@@ -74,8 +74,13 @@ a {
   align-items: center; 
   justify-content: center;
   text-align: center; 
- 
- 
+  border: 1px solid black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius:20px ;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 63%;
+  margin-left: 10%;
 }
 /* input ville, besoin et date */
 .search_input {
@@ -98,12 +103,13 @@ flex-wrap: wrap;
   border-radius: 50%;
   display: flex;
   margin-top: 1%;
-  padding: 0.5%;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  padding: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   position: relative;
   color: white;
   font-family: cursive;
+  margin:2px;
 }
 /* barre icons */
 
@@ -160,7 +166,7 @@ flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   position: relative;
-  background-color: lightslategray;
+  background-color: rgba(191, 170, 143, 0.3);
   font-size: larger;
   border-radius: 50%; /* Appliquer la bordure en forme de cercle */
   width: fit-content; /* Ajuster la largeur en fonction du contenu */
@@ -183,4 +189,31 @@ flex-wrap: wrap;
 
 .besoin p {
   margin-top: 10%; /* Ajouter un espace entre les icônes et les textes */
+}
+.input-search{
+
+margin-left: 61px;
+}
+
+.input-search2{
+margin-right: 43px;
+
+}
+
+.input-search3{
+
+margin-right: 39px;
+}
+
+hr{
+
+width: 33px;
+font-weight: bold;
+transform: rotate(90deg);
+}
+.HR{
+width: 33px;
+  font-weight: bold;
+  transform: rotate(90deg);
+
 }

@@ -27,8 +27,10 @@ function SearchBar() {
             <option value="Saint Laurent du Var">Saint Laurent du Var</option>
             <option value="Cagnes sur Mer">Cagnes sur Mer</option>
           </select>
+         
         </div>
-        <div className="input-search">
+        <hr></hr>
+        <div className="input-search2">
           <label className="title-input-search" for="inputBesoin">
             Besoin
           </label>
@@ -48,12 +50,14 @@ function SearchBar() {
             <option value="Transport">Transport</option>
           </select>
         </div>
+        <hr></hr>
         <ReactDatePicker />
         <a className="loupe" href="#" onClick>
           <FaSistrix />
         </a>
       </form>
     </form>
+   
   );
 }
 export default SearchBar;

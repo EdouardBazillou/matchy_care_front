@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 function ReactDatePicker() {
   const [selectedDate, setSelectedDate] = useState(null);
   return (
-    <div className="input-search">
+    <div className="input-search3">
       <div className="title-input-search">Date</div>
       <DatePicker
         className="datepicker"
