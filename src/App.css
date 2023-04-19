@@ -70,12 +70,10 @@ a {
 }
 /* barre inputs ville, besoin et date */
 .searchbar {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center; 
- 
- 
+  text-align: center;
 }
 /* input ville, besoin et date */
 .search_input {
@@ -85,9 +83,8 @@ a {
   background-color: #fff;
   padding: 6px 12px;
   display: flex;
-  
- 
-flex-wrap: wrap;
+
+  flex-wrap: wrap;
   align-items: center;
 }
 /* icon recherche */
@@ -107,46 +104,34 @@ flex-wrap: wrap;
 }
 /* barre icons */
 
-.titles{
+.titles {
   justify-content: space-evenly;
   display: flex;
   line-height: 1%;
 }
-.childtitles1{
+.childtitles1 {
   padding-left: 8.5%;
 }
-.childtitles2{
-  padding-right:2.5%;
+.childtitles2 {
+  padding-right: 2.5%;
 }
 
-.childtitles3{
+.childtitles3 {
   padding-right: 23.5%;
 }
 
-.datepicker{
+.datepicker {
   border-style: none;
   font-size: 16px;
   color: #333;
   background-color: #fff;
   padding: 6px 12px;
   display: flex;
-
-  
 }
-.title-input-search{
+.title-input-search {
   margin-right: 71%;
   font-weight: bold;
 }
-
-
-
-/* .besoin {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: relative;
-  right: 1%;
-} */
 
 .besoin {
   display: flex;
