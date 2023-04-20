@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { accountService } from "../service/account.service";
 
 function Login() {
   const [user, setUser] = useState({
@@ -38,6 +39,7 @@ function Login() {
       })
       .then((response) => {
         console.log("response", response);
+         accountService.savetoken(response.data.access_token)
         if ((response.success = true)) {
           navigate("/");
         }
@@ -54,6 +56,7 @@ function Login() {
       </div>
       <form onSubmit={handleSubmit} className="loginForm">
         <div>
+   <h5>Bienvenue Sur Matchy Care</h5>
           <input
             type="text"
             className="Email"
