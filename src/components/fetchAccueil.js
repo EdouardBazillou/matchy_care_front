@@ -28,17 +28,14 @@ function FetchAccueil() {
     if (pro.length >= 0) {
       return pro.map((item, index) => {
         return (
-          <div key={index} className="proContainer">
-            <form>
-              <div>
-                <h1 className="firstname">{item.firstname}</h1>
-                <p>{item.lastname}</p>
-                <p>{item.email}</p>
-                <p>{item.phoneNumber}</p>
-                <p>{item.profession}</p>
-              </div>
-              <button>consulter</button>
-            </form>
+          <div key={index} className="proCard">
+            <h1 className="proName">{item.firstname}</h1>
+            <div className="proDetails">
+              <p>Email: {item.email}</p>
+              <p>Phone: {item.phoneNumber}</p>
+              <p>Profession: {item.profession}</p>
+            </div>
+            <button>View Profile</button>
           </div>
         );
       });
