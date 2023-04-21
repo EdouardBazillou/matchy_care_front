@@ -248,7 +248,7 @@ input.Email{
 
 }
 .log{
-border-radius: 2%;
+border-radius: 7%;
 background-color: cornflowerblue;
   border: none;
   color: white;
@@ -275,4 +275,43 @@ font-size: 70%;
 h4{
 font-size: 70%;
 margin-top:50%;
+}
+.formu{
+  text-align: center;
+    margin-top: 15%;
+    border: 1px solid black;
+    border-radius: 22px;
+    margin-left: 29%;
+    margin-right: 32%;
+    padding: 42px;
+
+}
+.info{
+border-radius: 6px;
+margin-top:9px;
+
+}
+.compte{
+
+border-radius: 7%;
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  /*couleur du texte du bouton*/
+  padding: 10px 20px;
+  /*ajoute un espace de remplissage autour du texte du bouton*/
+  text-align: center;
+  /*centre le texte horizontalement*/
+
+
+  text-decoration: none;
+  /*supprime la décoration de lien par défaut*/
+  display: inline-block;
+  /*affiche le bouton comme un élément en ligne*/
+  font-size: 16px;
+  /*définit la taille de police*/
+  border-radius: 20px;
+  margin-top: 5%;
+
+
 }
