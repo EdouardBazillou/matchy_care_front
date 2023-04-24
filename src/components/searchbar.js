@@ -2,6 +2,8 @@ import ReactDatePicker from "../components/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaSistrix } from "react-icons/fa";
 
+import FilterProBySkill from "./FilterPro";
+
 import React from "react";
 
 function SearchBar() {
@@ -27,7 +29,6 @@ function SearchBar() {
             <option value="Saint Laurent du Var">Saint Laurent du Var</option>
             <option value="Cagnes sur Mer">Cagnes sur Mer</option>
           </select>
-         
         </div>
         <hr></hr>
         <div className="input-search2">
@@ -38,8 +39,10 @@ function SearchBar() {
             <option value="" disabled selected hidden>
               Comment peut-on vous aider ?
             </option>
-            <option value=" Mobilité"> Mobilité</option>/
-            <option value="Repas">Repas</option>
+            <option name="mobility" value="Mobility">
+              Mobility
+            </option>
+            /<option value="Repas">Repas</option>
             <option value="Entretien">Entretien</option>
             <option value="Change">Change</option>
             <option value="Rééducation">Rééducation</option>
@@ -52,12 +55,11 @@ function SearchBar() {
         </div>
         <hr></hr>
         <ReactDatePicker />
-        <a className="loupe" href="#" onClick>
+        <button className="loupe" onSubmit={FilterProBySkill()}>
           <FaSistrix />
-        </a>
+        </button>
       </form>
     </form>
-   
   );
 }
 export default SearchBar;
