@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import Icone from "../icone";
 import SearchBar from "../components/searchbar";
 import "react-datepicker/dist/react-datepicker.css";
-import FecthAccueil from "../components/fetchAccueil";
-
+import FetchAccueil from "../components/fetchAccueil";
+import "../components/professionalCard.css";
 function Accueil() {
   return (
     <div>
@@ -45,9 +45,8 @@ function Accueil() {
       <div className="icone">
         <Icone />
       </div>
-      <div>
-        <FecthAccueil />
-      </div>
+
+      <FetchAccueil />
     </div>
   );
 }

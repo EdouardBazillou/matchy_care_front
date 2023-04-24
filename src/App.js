@@ -3,9 +3,9 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./components/error";
 import Accueil from "./users/Accueil";
+import Profil from "./components/Profil";
 import Login from "./users/login";
 import RegisterPatient from "./users/registerPatient";
-
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/registerPatient",
-    element: <RegisterPatient/>,
+    element: <RegisterPatient />,
     errorElement: <Error />,
   },
   {
@@ -31,6 +31,11 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Accueil />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/professional/:id",
+    element: <Profil />,
     errorElement: <Error />,
   },
 ]);
