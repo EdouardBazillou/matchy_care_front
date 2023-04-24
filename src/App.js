@@ -6,6 +6,7 @@ import Accueil from "./users/Accueil";
 import Profil from "./components/Profil";
 import Login from "./users/login";
 import RegisterPatient from "./users/registerPatient";
+import RegisterPro from "./users/RegisterPro";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/registerPro",
-    element: <Accueil />,
+    element: <RegisterPro />,
     errorElement: <Error />,
   },
   {
