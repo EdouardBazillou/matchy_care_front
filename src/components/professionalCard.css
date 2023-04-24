@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.proCard {
+  margin: 0;
+  margin-left: 8%;
+}
+.proCard img {
+  height: 30vh;
+}

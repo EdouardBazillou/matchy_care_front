@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import "./professionalCard.css";
+import profilPicture from "./pictures/exemple.png";
+import { Link } from "react-router-dom";
 
 function FetchAccueil() {
   //Fetch GET pour récuperer les pros sur la page d'accueil//
@@ -29,13 +32,23 @@ function FetchAccueil() {
       return pro.map((item, index) => {
         return (
           <div key={index} className="proCard">
-            <h1 className="proName">{item.firstname}</h1>
-            <div className="proDetails">
-              <p>Email: {item.email}</p>
-              <p>Phone: {item.phoneNumber}</p>
-              <p>Profession: {item.profession}</p>
-            </div>
-            <button>View Profile</button>
+            <Link to={`/professional/${item.id}`} key={index}>
+              <img src={profilPicture} alt="" />
+              <div className="flex">
+                <div>
+                  <h3 className="proName">{item.firstname}</h3>
+                  <p> {item.profession}</p>
+                </div>
+                <div>
+                  <h3 className="price"> {item.price} €</h3>
+                </div>
+              </div>
+              <div className="proDetails">
+                {/* <p>Email: {item.email}</p>
+              <p>Phone: {item.phoneNumber}</p> */}
+              </div>
+              {/* <button>View Profile</button> */}
+            </Link>
           </div>
         );
       });
@@ -51,7 +64,7 @@ function FetchAccueil() {
       <div>
         <button onClick={getPro}>Actualiser les Pros</button>
       </div>
-      <div>{renderPro()}</div>
+      <div className="flex">{renderPro()}</div>
     </div>
   );
 }
