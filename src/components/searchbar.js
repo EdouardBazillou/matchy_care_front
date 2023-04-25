@@ -2,7 +2,6 @@ import ReactDatePicker from "../components/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaSistrix } from "react-icons/fa";
 import { useState } from "react";
-
 import React from "react";
 
 function SearchBar(props) {
@@ -14,7 +13,18 @@ function SearchBar(props) {
     e.preventDefault();
     props.onSearch(ville, besoin, date);
   };
-
+  //select checkbox
+  var expanded = false;
+  function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+      checkboxes.style.display = "block";
+      expanded = true;
+    } else {
+      checkboxes.style.display = "none";
+      expanded = false;
+    }
+  }
   return (
     <form onSubmit={handleSubmit} className="searchbar">
       <div className="circle"></div>
@@ -66,6 +76,47 @@ function SearchBar(props) {
           <option value="entertainment">Compagnie</option>
           <option value="driving">Transport</option>
         </select>
+        {/* select de test */}
+        <div class="multiselect">
+          <div className="selectBox" onClick={showCheckboxes}>
+            <select className="search_input" name="besoin">
+              <option>Choix</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes">
+            <label for="one">
+              <input
+                name="besoin"
+                value="mobility"
+                onChange={(e) =>
+                  setBesoin(e.target.checked ? besoin + e.target.value : besoin)
+                }
+                type="checkbox"
+                id="one"
+              />
+              Mobilité
+            </label>
+            <label for="two">
+              <input
+                name="besoin"
+                value="cooking"
+                onChange={(e) =>
+                  setBesoin(
+                    e.target.checked ? besoin + e.target.value + ", " : besoin
+                  )
+                }
+                type="checkbox"
+                id="two"
+              />
+              Repas
+            </label>
+            <label for="three">
+              <input type="checkbox" id="three" />
+              Entretien
+            </label>
+          </div>
+        </div>
       </div>
       <hr></hr>
       <ReactDatePicker selected={date} onChange={setDate} />
