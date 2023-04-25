@@ -42,9 +42,7 @@ function Accueil() {
       <br></br>
       <br></br>
       <br></br>
-      <div className="icone">
-        <Icone />
-      </div>
+      <div className="icone">{/* <Icone /> */}</div>
 
       <FetchAccueil />
     </div>
