@@ -1,0 +1,54 @@
+.Timer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px; 
+ 
+}
+.buttonTime {
+    width: 20%;
+    height: 30px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+    overflow: hidden;
+    background-color: #e2e5e7;
+}
+.buttonTime:focus {
+        background-color: rgb(111, 99, 244); 
+      }
+   
+   .containerTime {
+
+    margin-left: 60%;
+    
+   }
+   .Calendar {
+    margin-left: 60%;
+   }
+
+   .buttonReservez {
+    width: 20%;
+    height: 30px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+    overflow: hidden;
+    background-color: rgb(111, 99, 244); 
+
+   }
+   .Programmer{
+
+    margin-left: 60%;
+   }
+   .Price{
+border: solid black 1px;
+    margin-left: 62.5%;
+    text-align: center;
+    border-radius: 1em;
+    width: 25%;
+    box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+    font-weight: bolder;
+    font-size: larger;
+   }
+   .Price2{
+color: rgb(115, 115, 211);
+
+   }
