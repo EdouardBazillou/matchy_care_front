@@ -18,11 +18,11 @@
    
    .containerTime {
 
-    margin-left: 60%;
+    margin-left: 30%;
     
    }
    .Calendar {
-    margin-left: 60%;
+    margin-left: 30%;
    }
 
    .buttonReservez {
@@ -36,7 +36,7 @@
    }
    .Programmer{
 
-    margin-left: 60%;
+    margin-left: 30%;
    }
    .Price{
 border: solid black 1px;
@@ -52,3 +52,18 @@ border: solid black 1px;
 color: rgb(115, 115, 211);
 
    }
+   .profil{
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+}
+
+.rdv{
+
+    align-items: center;
+    width: 200%;
+}
+.imgProfil{
+width: 60%;
+    
+}

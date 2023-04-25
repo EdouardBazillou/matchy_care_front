@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Header from "../components/Header";
 
 function Login() {
   const [user, setUser] = useState({
@@ -42,12 +43,7 @@ function Login() {
 
   return (
     <div>
-      <div className="loginPage">
-        <h1>Bienvenue Sur Matchy Care</h1>
-        <h2>Veuillez Vous Connectez</h2>
-        <br></br>
-        <br></br>
-      </div>
+      <Header title="Bienvenue sur Matchy Care" />
       <form onSubmit={handleSubmit} className="loginForm">
         <div>
           <h5>Bienvenue Sur Matchy Care</h5>
