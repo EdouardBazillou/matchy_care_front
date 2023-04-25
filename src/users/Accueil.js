@@ -3,7 +3,6 @@ import BurgerMenu from "../components/burgerMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Icone from "../icone";
 import SearchBar from "../components/searchbar";
 import "react-datepicker/dist/react-datepicker.css";
 import FetchAccueil from "../components/fetchAccueil";
@@ -38,13 +37,10 @@ function Accueil() {
       <br></br>
       <br></br>
       <br></br>
-      <SearchBar />
       <br></br>
       <br></br>
       <br></br>
-      <div className="icone">
-        <Icone />
-      </div>
+      <div className="icone">{/* <Icone /> */}</div>
 
       <FetchAccueil />
     </div>

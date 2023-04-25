@@ -32,16 +32,12 @@ function Login() {
         password: user.password,
       }),
     };
-    await fetch(`http://127.0.0.1:8000/api/login`, options)
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        console.log("response", response);
-        if ((response.success = true)) {
-          navigate("/");
-        }
-      });
+    await fetch(`http://127.0.0.1:8000/api/login`, options).then((response) => {
+      console.log(response);
+      if (response.status === 200) {
+        navigate("/");
+      }
+    });
   };
 
   return (
