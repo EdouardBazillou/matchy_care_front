@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useReducer } from "react";
 import { buttonReducer } from "./buttonReducer";
 import "../App.css";
+import SearchBar from "./searchbar";
 import {
   FaAccessibleIcon,
   FaBath,
@@ -22,11 +23,23 @@ import {
 } from "react-icons/md";
 function FetchAccueil() {
   const [pro, setPro] = useState([]);
-  //contient valeur input
-  // const [filtreInput, setFiltre] = useState("");
+
   const [skillButton, updateskill] = useReducer(buttonReducer, "all");
   //variable d'etat vide qui va contenir le skill au moment du onclick-button
-  // const [recherche, setRecherche] = useState("");
+
+  const handleSearch = (ville, besoin, date) => {
+    setSearchParams({
+      ville: ville,
+      besoin: besoin,
+      date: date,
+    });
+  };
+
+  const [searchParams, setSearchParams] = useState({
+    ville: "",
+    besoin: "",
+    date: "",
+  });
 
   //fonction de fetch
   const getPro = async () => {
@@ -36,16 +49,7 @@ function FetchAccueil() {
         "Content-Type": "application/json",
       },
     };
-    if (skillButton !== "") {
-      let response = await fetch(
-        `http://127.0.0.1:8000/api/filter/skills/${skillButton}`,
-        options
-      );
-      let data = await response.json();
-
-      setPro(data.professionals);
-      console.log(data);
-    }
+    //affichage de tout les professionels
     if (skillButton === "all") {
       let response = await fetch(
         `http://127.0.0.1:8000/api/professionals`,
@@ -54,7 +58,36 @@ function FetchAccueil() {
       let data = await response.json();
 
       setPro(data.data);
-      console.log(data);
+    }
+    //affichage des professionels en fonction du besoin en cliquant sur les boutons
+    if (skillButton !== "all") {
+      let response = await fetch(
+        `http://127.0.0.1:8000/api/filter/skills/${skillButton}`,
+        options
+      );
+      let data = await response.json();
+
+      setPro(data.professionals);
+    }
+    //affichage des professionels par localisation en saisissant la ville sur la searchBar
+    if (searchParams.ville != "") {
+      let response = await fetch(
+        `http://127.0.0.1:8000/api/filter/city/${searchParams.ville}`,
+        options
+      );
+      let data = await response.json();
+
+      setPro(data.professionals);
+    }
+    //affichage des professionels par skills via la searchBar
+    if (searchParams.besoin != "") {
+      let response = await fetch(
+        `http://127.0.0.1:8000/api/filter/skills/${searchParams.besoin}`,
+        options
+      );
+      let data = await response.json();
+
+      setPro(data.professionals);
     }
   };
 
@@ -89,9 +122,12 @@ function FetchAccueil() {
   useEffect(() => {
     getPro();
   }, [skillButton]);
-
+  useEffect(() => {
+    getPro();
+  }, [searchParams]);
   return (
     <div>
+      <SearchBar onSearch={handleSearch} />
       <div className="besoin">
         <div className="skills">
           <button

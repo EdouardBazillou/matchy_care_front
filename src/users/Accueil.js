@@ -37,7 +37,6 @@ function Accueil() {
       <br></br>
       <br></br>
       <br></br>
-      <SearchBar />
       <br></br>
       <br></br>
       <br></br>

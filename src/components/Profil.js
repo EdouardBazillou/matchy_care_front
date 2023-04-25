@@ -18,7 +18,7 @@ function Profil() {
         },
       };
       let response = await fetch(
-        `http://127.0.0.1:8000/api/professionals/${id}`,
+        http://127.0.0.1:8000/api/professionals/${id},
         options
       );
       let data = await response.json();
@@ -50,12 +50,11 @@ function Profil() {
   };
 
   return (
-    <div>
+    <div className="profil">
+      <div>{renderProfil()}</div>
       <div>
-        P {id}
         <AppointmentScheduler />
       </div>
-      <div>{renderProfil()}</div>
     </div>
   );
 }
