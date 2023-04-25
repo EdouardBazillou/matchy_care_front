@@ -73,16 +73,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
   border: 1px solid black;
   border-top-left-radius: 20px;
-  border-bottom-left-radius:20px ;
+  border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 63%;
   margin-left: 10%;
-
-
 }
 /* input ville, besoin et date */
 .search_input {
@@ -110,7 +108,7 @@ a {
   position: relative;
   color: white;
   font-family: cursive;
-  margin:2px;
+  margin: 2px;
 }
 /* barre icons */
 
@@ -148,8 +146,6 @@ a {
   gap: 6%;
   justify-content: center; /* Centrer le contenu horizontalement */
   align-items: center; /* Centrer le contenu verticalement */
-  
-   
 }
 
 .icones {
@@ -157,15 +153,23 @@ a {
   flex-direction: row;
   justify-content: space-around;
   position: relative;
-  background-color: rgba(191, 170, 143, 0.3);
+  background-color: rgb(243, 246, 250);
   font-size: larger;
   border-radius: 50%; /* Appliquer la bordure en forme de cercle */
   width: fit-content; /* Ajuster la largeur en fonction du contenu */
-  padding: 20%; /* Ajouter un espace de remplissage autour des icônes */
-  margin: 0 auto; /* Centrer le conteneur d'icônes horizontalement */ 
-transform-origin: center;
+  /* padding: 20%; Ajouter un espace de remplissage autour des icônes */
+  height: 7vh;
+  width: 4vw;
+  margin: 0 auto; /* Centrer le conteneur d'icônes horizontalement */
+  transform-origin: center;
 }
-
+.icones:hover {
+  border: 0.1em solid rgb(72, 71, 71);
+}
+.skills {
+  font-weight: bolder;
+  color: rgb(101, 99, 99);
+}
 .icones a {
   display: flex;
   align-items: center;
@@ -183,31 +187,27 @@ transform-origin: center;
   margin-top: 10%; /* Ajouter un espace entre les icônes et les textes */
 }
 
-.input-search{
-margin-left: 44px;
+.input-search {
+  margin-left: 44px;
 }
 
-.input-search2{
-margin-right: 43px;
-
+.input-search2 {
+  margin-right: 43px;
 }
 
-.input-search3{
-
-margin-right: 39px;
+.input-search3 {
+  margin-right: 39px;
 }
 
-hr{
-
-width: 33px;
-font-weight: bold;
-transform: rotate(90deg);
-}
-.HR{
-width: 33px;
+hr {
+  width: 33px;
   font-weight: bold;
   transform: rotate(90deg);
-
+}
+.HR {
+  width: 33px;
+  font-weight: bold;
+  transform: rotate(90deg);
 }
 
 .loginForm {
@@ -219,7 +219,7 @@ width: 33px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   flex-direction: column;
-  PADDING: 6%;
+  padding: 6%;
   width: 10%;
   margin-left: 36%;
   margin-top: 4%;
@@ -237,63 +237,15 @@ width: 33px;
   margin: 0%;
 }
 
-input.Password{
-margin-top: 13px;
-border-radius: 6px;
-
+input.Password {
+  margin-top: 13px;
+  border-radius: 6px;
 }
-input.Email{
-
-    border-radius: 6px;
-
+input.Email {
+  border-radius: 6px;
 }
-.log{
-border-radius: 7%;
-background-color: cornflowerblue;
-  border: none;
-  color: white;
-  /*couleur du texte du bouton*/
-  padding: 10px 20px;
-  /*ajoute un espace de remplissage autour du texte du bouton*/
-  text-align: center;
-  /*centre le texte horizontalement*/
-
-
-  text-decoration: none;
-  /*supprime la décoration de lien par défaut*/
-  display: inline-block;
-  /*affiche le bouton comme un élément en ligne*/
-  font-size: 16px;
-  /*définit la taille de police*/
-  border-radius: 20px;
-margin-top:15%;
-
-}
-h5{
-font-size: 70%;
-}
-h4{
-font-size: 70%;
-margin-top:50%;
-}
-.formu{
-  text-align: center;
-    margin-top: 15%;
-    border: 1px solid black;
-    border-radius: 22px;
-    margin-left: 29%;
-    margin-right: 32%;
-    padding: 42px;
-
-}
-.info{
-border-radius: 6px;
-margin-top:9px;
-
-}
-.compte{
-
-border-radius: 7%;
+.log {
+  border-radius: 7%;
   background-color: cornflowerblue;
   border: none;
   color: white;
@@ -303,6 +255,45 @@ border-radius: 7%;
   text-align: center;
   /*centre le texte horizontalement*/
 
+  text-decoration: none;
+  /*supprime la décoration de lien par défaut*/
+  display: inline-block;
+  /*affiche le bouton comme un élément en ligne*/
+  font-size: 16px;
+  /*définit la taille de police*/
+  border-radius: 20px;
+  margin-top: 15%;
+}
+h5 {
+  font-size: 70%;
+}
+h4 {
+  font-size: 70%;
+  margin-top: 50%;
+}
+.formu {
+  text-align: center;
+  margin-top: 15%;
+  border: 1px solid black;
+  border-radius: 22px;
+  margin-left: 29%;
+  margin-right: 32%;
+  padding: 42px;
+}
+.info {
+  border-radius: 6px;
+  margin-top: 9px;
+}
+.compte {
+  border-radius: 7%;
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  /*couleur du texte du bouton*/
+  padding: 10px 20px;
+  /*ajoute un espace de remplissage autour du texte du bouton*/
+  text-align: center;
+  /*centre le texte horizontalement*/
 
   text-decoration: none;
   /*supprime la décoration de lien par défaut*/
@@ -312,6 +303,4 @@ border-radius: 7%;
   /*définit la taille de police*/
   border-radius: 20px;
   margin-top: 5%;
-
-
 }
