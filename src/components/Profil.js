@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import AppointmentScheduler from "./Appointment";
+
 function Profil() {
   const { id } = useParams();
   const [pro, setPro] = useState(null);
@@ -26,7 +28,12 @@ function Profil() {
   useEffect(() => {
     console.log(pro);
   }, [pro]);
-  return <div>P {id}</div>;
+  return (
+    <div>
+      P {id}
+      <AppointmentScheduler />
+    </div>
+  );
 }
 
 export default Profil;
