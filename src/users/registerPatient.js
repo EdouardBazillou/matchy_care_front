@@ -2,85 +2,83 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 function RegisterPatient() {
-
-  const [user, setUser] = useState({
-    Nom: "",
-    Prénom: "",
-    email: "",
-    password: "",
-   confirmation: "",
-  });
+  //on déclare une variable d'état pour stocker les valeurs du formulaire
+  const [user, setUser] = useState({});
+  //on déclare une variable d'état pour stocker les valeurs des skills
+  const [needs, setNeeds] = useState([]);
 
   const navigate = useNavigate();
-
-  const handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    setUser({
-      ...user,
-      [name]: value,
-    });
+  //quand la valeur des champs change, on récupère leur valeur et on les envoie dans user
+  const handleInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
-
+  //quand les valeurs des besoins changent, on les stocke dans needs
+  const handleNeeds = (e) => {
+    setNeeds([...needs, e.target.value]);
+  };
+  //à la validaion du formulaire
   const handleSubmit = async (event) => {
     event.preventDefault();
+    //on précise les en-têtes et la méthode
     let options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      //on définit le contenu du body
       body: JSON.stringify({
-         Nom: user. Nom,
-         Prénom: user. Prénom,
-         email: user.email,
+        lastname: user.lastname,
+        firstname: user.firstname,
+        email: user.email,
         password: user.password,
-         confirmation: user.confirmation,
+        phoneNumber: user.phoneNumber,
+        age: user.age,
+        address: user.address,
+        additional_information: user.additional_information,
+        description: user.description,
+        needs: needs,
       }),
     };
+    //on récupère le bon endpoint
     await fetch(`http://127.0.0.1:8000/api/patients`, options)
       .then((response) => {
         return response.json();
       })
       .then((response) => {
-        console.log("response", response);
         if ((response.success = true)) {
           navigate("/");
         }
       });
   };
+
   return (
-<div class="formu">
-  <h3>Inscription Patient</h3>
-    <form onSubmit={handleSubmit}>
-      <div>
+    <div className="formu">
+      <h3>Inscription Patient</h3>
+      <form>
+        <div>
           <input
             type="text"
             className="info"
             placeholder="Nom"
-            name="nom"
-            value={user.name}
+            name="lastname"
             onChange={handleInputChange}
           />
         </div>
-      <div>
+        <div>
           <input
             type="text"
             className="info"
-            placeholder="Prenom"
-            name="nom"
-            value={user.name}
+            placeholder="Prénom"
+            name="firstname"
             onChange={handleInputChange}
           />
         </div>
-            <div>
+        <div>
           <input
             type="text"
             className="info"
-            placeholder="email"
+            placeholder="Email"
             name="email"
-            value={user.email}
             onChange={handleInputChange}
           />
         </div>
@@ -88,27 +86,161 @@ function RegisterPatient() {
           <input
             type="password"
             className="info"
-            placeholder="mot de passe"
+            placeholder="Mot de passe"
             name="password"
-            value={user.password}
             onChange={handleInputChange}
           />
         </div>
         <div>
           <input
-            type="password"
+            type="tel"
             className="info"
-            placeholder="confirmation mdp "
-            name="password"
-            value={user.password}
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="Numéro de téléphone"
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit" className="compte">
-         Crée Mon Compte 
+        <div>
+          <input
+            type="text"
+            className="info"
+            name="age"
+            id="age"
+            placeholder="Age"
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="info"
+            placeholder="Adresse"
+            name="address"
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="info"
+            name="additional_information"
+            id="additional_information"
+            placeholder="Informations complémentaires"
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="info"
+            name="description"
+            id="description"
+            placeholder="Description"
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group">
+          <label>
+            <strong>Besoins:</strong>
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="mobility"
+              onChange={handleNeeds}
+            />
+            Mobilité
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="cooking"
+              onChange={handleNeeds}
+            />
+            Repas
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="houseCleaning"
+              onChange={handleNeeds}
+            />
+            Entretien
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="clothesChange"
+              onChange={handleNeeds}
+            />
+            Change
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="reeducation"
+              onChange={handleNeeds}
+            />
+            Rééducation
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="hygiene"
+              onChange={handleNeeds}
+            />{" "}
+            Toilette
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="nursing"
+              onChange={handleNeeds}
+            />
+            Soin
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="medication"
+              onChange={handleNeeds}
+            />
+            Traitement
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="entertainment"
+              onChange={handleNeeds}
+            />
+            Compagnie
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="needs[]"
+              value="transportation"
+              onChange={handleNeeds}
+            />
+            Transport
+          </label>
+        </div>
+        <button onClick={handleSubmit} className="compte">
+          Créer un compte
         </button>
-    </form>
-      </div>
+      </form>
+    </div>
   );
 }
 

@@ -1,64 +1,59 @@
 import ReactDatePicker from "../components/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaSistrix } from "react-icons/fa";
-
-import FilterProBySkill from "./FilterPro";
-
 import React from "react";
 
 function SearchBar() {
   return (
-    <form>
-      <form className="searchbar">
-        <div class="circle"></div>
-        <div className="input-search">
-          <label className="title-input-search" for="ville">
-            Ville
-          </label>
-          <select
-            className="search_input"
-            type="text"
-            id="ville"
-            name="ville"
-            placeholder="Ville"
-          >
-            <option value="" disabled selected hidden>
-              Entrez votre localisation
-            </option>
-            <option value="Nice">Nice</option>
-            <option value="Saint Laurent du Var">Saint Laurent du Var</option>
-            <option value="Cagnes sur Mer">Cagnes sur Mer</option>
-          </select>
-        </div>
-        <hr></hr>
-        <div className="input-search2">
-          <label className="title-input-search" for="inputBesoin">
-            Besoin
-          </label>
-          <select className="search_input" name="besoin">
-            <option value="" disabled selected hidden>
-              Comment peut-on vous aider ?
-            </option>
-            <option name="mobility" value="Mobility">
-              Mobility
-            </option>
-            /<option value="Repas">Repas</option>
-            <option value="Entretien">Entretien</option>
-            <option value="Change">Change</option>
-            <option value="Rééducation">Rééducation</option>
-            <option value="Toilette">Toilette</option>
-            <option value="Soin">Soin</option>
-            <option value="Traitement">Traitement</option>
-            <option value="Compagnie">Compagnie</option>
-            <option value="Transport">Transport</option>
-          </select>
-        </div>
-        <hr></hr>
-        <ReactDatePicker />
-        <button className="loupe" onSubmit={FilterProBySkill()}>
-          <FaSistrix />
-        </button>
-      </form>
+    <form className="searchbar">
+      <div className="circle"></div>
+      <div className="input-search">
+        <label className="title-input-search" for="ville">
+          Ville
+        </label>
+        <select
+          className="search_input"
+          type="text"
+          id="ville"
+          name="ville"
+          placeholder="Ville"
+        >
+          <option value="" disabled selected hidden>
+            Entrez votre localisation
+          </option>
+          <option value="Nice">Nice</option>
+          <option value="Saint Laurent du Var">Saint Laurent du Var</option>
+          <option value="Cagnes sur Mer">Cagnes sur Mer</option>
+        </select>
+      </div>
+      <hr></hr>
+      <div className="input-search2">
+        <label className="title-input-search" for="inputBesoin">
+          Besoin
+        </label>
+        <select className="search_input" name="besoin">
+          <option value="" disabled selected hidden>
+            Comment peut-on vous aider ?
+          </option>
+          <option name="mobility" value="Mobility">
+            Mobility
+          </option>
+          <option value="Repas">Repas</option>
+          <option value="Entretien">Entretien</option>
+          <option value="Change">Change</option>
+          <option value="Rééducation">Rééducation</option>
+          <option value="Toilette">Toilette</option>
+          <option value="Soin">Soin</option>
+          <option value="Traitement">Traitement</option>
+          <option value="Compagnie">Compagnie</option>
+          <option value="Transport">Transport</option>
+        </select>
+      </div>
+      <hr></hr>
+      <ReactDatePicker />
+      <button className="loupe">
+        <FaSistrix />
+      </button>
     </form>
   );
 }

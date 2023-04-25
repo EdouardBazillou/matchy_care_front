@@ -14,67 +14,119 @@ import {
   MdOutlineMedication,
   MdOutlineHealthAndSafety,
 } from "react-icons/md";
+import { useEffect, useState } from "react";
 function Icone() {
+  //on crée une variable d'état à vide qui va recevoir les données du filtre
+  const [filteredPros, setFilteredPros] = useState([]);
+  //on crée une variable d'état qui permet de stocker le filtre actif
+  const [filterSkills, setFilterSkills] = useState("");
+  //on crée une variable d'état pour définir si le filtre est actif ou non
+  const [filterOn, setFilterOn] = useState(false);
+  //on récupére la valeur du filtre via un événement de clic
+  const handleFilter = (e) => {
+    setFilterSkills(e.target.value);
+    setFilterOn(!filterOn);
+    getFilteredPros();
+  };
+  const getFilteredPros = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    //on complète l'url avec le filtre qu'on a stocké en amont
+    await fetch(
+      `http://127.0.0.1:8000/api/filter/skills/${filterSkills}`,
+      options
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        setFilteredPros(response);
+      });
+  };
+
+  useEffect(() => {
+    console.log("filteredPros", filteredPros, "filterSkills", filterSkills);
+  }, [filteredPros, filterSkills]);
   return (
     <div className="besoin">
       <div>
-        <a className="icones" href="#" onClick>
+        <button className="icones" value={"mobility"} onClick={handleFilter}>
           <FaAccessibleIcon />
-        </a>
-        <p> mobilite</p>
+        </button>
+        <p>Mobilité</p>
       </div>
       <div>
-        <a className="icones" href="2" onClick>
+        <button className="icones" value={"cooking"} onClick={handleFilter}>
           <MdSoupKitchen />
-        </a>
-        <p>repas</p>
+        </button>
+        <p>Repas</p>
       </div>
       <div>
-        <a className="icones" href="3" onClick>
+        <button
+          className="icones"
+          value={"houseCleaning"}
+          onClick={handleFilter}
+        >
           <MdOutlineCleaningServices />
-        </a>
-        <p>Entretient</p>
+        </button>
+        <p>Entretien</p>
       </div>
       <div>
-        <a className="icones" href="5" onClick>
+        <button
+          className="icones"
+          value={"clothesChange"}
+          onClick={handleFilter}
+        >
           <FaToilet />
-        </a>
+        </button>
         <p>Change</p>
       </div>
       <div>
-        <a className="icones" href="4" onClick>
+        <button className="icones" value={"reeducation"} onClick={handleFilter}>
           <MdFitnessCenter />
-        </a>
+        </button>
         <p>Réeducation</p>
       </div>
       <div>
-        <a className="icones" href="2" onClick>
+        <button className="icones" value={"hygiene"} onClick={handleFilter}>
           <FaBath />
-        </a>
+        </button>
         <p>Toilette</p>
       </div>
       <div>
-        <a className="icones" href="3" onClick>
+        <button className="icones" value={"nursing"} onClick={handleFilter}>
           <MdOutlineHealthAndSafety />
-        </a>
+        </button>
         <p>Soins</p>
       </div>
       <div>
-        <a className="icones" href="1" onClick>
+        <button className="icones" value={"medication"} onClick={handleFilter}>
           <MdOutlineMedication />
-        </a>
+        </button>
         <p>Traitement</p>
       </div>
       <div>
-        <a className="icones" href="9" onClick>
+        <button
+          className="icones"
+          value={"entertainment"}
+          onClick={handleFilter}
+        >
           <FaUserFriends />
-        </a>
+        </button>
         <p>Compagnie</p>
       </div>
       <div>
-        <a className="icones" href="o" onClick>
+        <button
+          className="icones"
+          value={"transportation"}
+          onClick={handleFilter}
+        >
           <MdOutlineDirectionsCarFilled />
-        </a>
+        </button>
         <p>Transport</p>
       </div>
     </div>
