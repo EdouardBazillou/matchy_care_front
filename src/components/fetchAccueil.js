@@ -105,7 +105,7 @@ function FetchAccueil() {
               <div className="flex">
                 <div className="proCardLeftText">
                   <h3 className="proCard proName">{proItem.firstname}</h3>
-                  <p> {proItem.profession}</p>
+                  <p proCardLeftTextt> {proItem.profession}</p>
                 </div>
                 <div>
                   <h3 className="proCard price"> {proItem.price}€/Heure</h3>

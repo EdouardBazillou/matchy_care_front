@@ -16,6 +16,9 @@
   margin-left: 5%;
   font-weight: bold;
 }
+.proCardLeftTextt {
+  color: grey;
+}
 img {
   width: 15vw;
   border-radius: 50px;
