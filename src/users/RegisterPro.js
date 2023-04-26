@@ -8,6 +8,8 @@ function RegisterPro() {
   const [professional, setProfessional] = useState({});
   //on déclare une variable d'état pour stocker les skills du professionnel
   const [skills, setSkills] = useState([]);
+  //on déclare une variable d'état pour stocker l'image de profil du professionnel
+  const [profilePicture, setProfilePicture] = useState(null);
   //quand la valeur des champs change, on récupère leur valeur et on les envoie dans professional
   const handleInputChange = (e) => {
     setProfessional({ ...professional, [e.target.name]: e.target.value });
@@ -17,49 +19,60 @@ function RegisterPro() {
   const handleSkills = (e) => {
     setSkills([...skills, e.target.value]);
   };
+  //quand la valeur du fichier change, on stocke l'image de profil dans profilePicture
+  const handleFileInputChange = (e) => {
+    const file = e.target.files[0];
+    setProfilePicture(file);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //on crée un FormData pour envoyer les données et l'image de profil en même temps
+    const formData = new FormData();
+    formData.append("lastname", professional.lastname);
+    formData.append("firstname", professional.firstname);
+    formData.append("email", professional.email);
+    formData.append("password", professional.password);
+    formData.append("phoneNumber", professional.phoneNumber);
+    formData.append("profession", professional.profession);
+    formData.append("city", professional.city);
+    formData.append("experienceYears", professional.experienceYears);
+    formData.append("experienceDetails", professional.experienceDetails);
+    formData.append("price", professional.price);
+    formData.append("languages", professional.languages);
+    formData.append("diplomas", professional.diplomas);
+    formData.append("description", professional.description);
+    skills.forEach((skill) => formData.append("skills[]", skill));
+    formData.append("profilePicture", profilePicture);
+
     //on précise les en-têtes et la méthode
-    let options = {
+    const options = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      //on définit le contenu du body
-      body: JSON.stringify({
-        lastname: professional.lastname,
-        firstname: professional.firstname,
-        email: professional.email,
-        password: professional.password,
-        phoneNumber: professional.phoneNumber,
-        password: professional.password,
-        profession: professional.profession,
-        city: professional.city,
-        experienceYears: professional.experienceYears,
-        experienceDetails: professional.experienceDetails,
-        price: professional.price,
-        languages: professional.languages,
-        diplomas: professional.diplomas,
-        description: professional.description,
-        skills: skills,
-      }),
+      body: formData,
     };
+
     //on récupère le bon endpoint
     await fetch(`http://127.0.0.1:8000/api/professionals`, options)
       .then((response) => {
         return response.json();
       })
       .then((response) => {
-        if ((response.success = true)) {
+        if (response.success) {
           navigate("/");
         }
       });
   };
   useEffect(() => {
-    console.log("professionnal", professional, "skills", skills);
-  }, [professional, skills]);
+    console.log(
+      "professionnal",
+      professional,
+      "skills",
+      skills,
+      "profilePicture",
+      profilePicture
+    );
+  }, [professional, skills, profilePicture]);
 
   return (
     <div>
@@ -90,6 +103,19 @@ function RegisterPro() {
                 name="firstname"
                 onChange={handleInputChange}
               />
+            </div>
+            {/* Image de profil */}
+            <div>
+              <label>
+                Ajouter une photo :
+                <input
+                  type="file"
+                  accept="image/*"
+                  required
+                  name="profilePicture"
+                  onChange={handleFileInputChange}
+                />
+              </label>
             </div>
             {/*Adresse mail */}
             <div>
