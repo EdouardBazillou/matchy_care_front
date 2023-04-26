@@ -46,10 +46,10 @@ function Login() {
       <Header title="Bienvenue sur Matchy Care" />
       <form onSubmit={handleSubmit} className="loginForm">
         <div>
-          <h5>Bienvenue Sur Matchy Care</h5>
+          <h5>Connexion</h5>
           <input
             type="text"
-            className="Email"
+            className="loginInput Email"
             placeholder="email"
             name="email"
             value={user.email}
@@ -59,7 +59,7 @@ function Login() {
         <div>
           <input
             type="password"
-            className="Password"
+            className="loginInput Password"
             placeholder="mot de passe"
             name="password"
             value={user.password}

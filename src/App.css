@@ -9,7 +9,8 @@
 .title {
   font-size: 12px;
   line-height: 8px;
-  background-color: #5e99c5;
+  background-color: rgb(131, 142, 189);
+
   border-radius: 50%;
   display: flex;
   margin: 0%;
@@ -29,17 +30,20 @@
 
 .title2 {
   font-size: 15px;
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .right {
   display: flex;
   flex-direction: row;
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   margin: 0px;
   inline-size: 14%;
 }
-
+.rightP {
+  white-space: nowrap;
+}
 .title3 {
   position: relative;
   left: -2%;
@@ -74,13 +78,11 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid black;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.584);
+  border-radius: 50px;
   width: 63%;
-  margin-left: 10%;
+  margin-left: 20%;
+  margin-bottom: 4%;
 }
 /* input ville, besoin et date */
 .search_input {
@@ -98,7 +100,7 @@ a {
 .loupe {
   font-size: 20px;
   line-height: 8px;
-  background-color: #5e99c5;
+  background-color: rgb(131, 142, 189);
   border-radius: 50%;
   display: flex;
   margin-top: 1%;
@@ -214,10 +216,7 @@ hr {
   display: flex;
   justify-content: center;
   border: 1px solid black;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 55px;
   flex-direction: column;
   padding: 6%;
   width: 10%;
@@ -230,11 +229,17 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5e99c5;
+  background-color: rgb(131, 142, 189);
   border-radius: 20%;
   color: white;
   font-family: cursive;
   margin: 0%;
+}
+.loginInput {
+  width: 10vw;
+  height: 3vh;
+  border-radius: 50px;
+  border: 1px solid grey;
 }
 
 input.Password {
@@ -336,5 +341,5 @@ h4 {
 }
 
 #checkboxes label:hover {
-  background-color: #1e90ff;
+  background-color: rgb(131, 142, 189);
 }

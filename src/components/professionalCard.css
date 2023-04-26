@@ -7,7 +7,16 @@
 .proCard {
   margin: 0;
   margin-left: 8%;
+  text-decoration: none;
 }
 .proCard img {
   height: 30vh;
+}
+.proCardLeftText {
+  margin-left: 5%;
+  font-weight: bold;
+}
+img {
+  width: 15vw;
+  border-radius: 50px;
 }

@@ -96,15 +96,19 @@ function FetchAccueil() {
       return pro.map((proItem, index) => {
         return (
           <div key={index} className="proCard">
-            <Link to={`/professional/${proItem.id}`} key={index}>
-              <img src={profilPicture} alt="" />
+            <Link
+              className="proCard"
+              to={`/professional/${proItem.id}`}
+              key={index}
+            >
+              <img src={`/images/${proItem.profilePicture}`} alt="" />
               <div className="flex">
-                <div>
-                  <h3 className="proName">{proItem.firstname}</h3>
+                <div className="proCardLeftText">
+                  <h3 className="proCard proName">{proItem.firstname}</h3>
                   <p> {proItem.profession}</p>
                 </div>
                 <div>
-                  <h3 className="price"> {proItem.price} €</h3>
+                  <h3 className="proCard price"> {proItem.price}€/Heure</h3>
                 </div>
               </div>
               <div className="proDetails">

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AppointmentScheduler from "./Appointment";
-import profilPicture from "./pictures/exemple.png";
+// import profilPicture from "./pictures/exemple.png";
 import Header from "./Header";
 import "./Appointment.css";
 
@@ -36,10 +36,14 @@ function Profil() {
         return (
           <div key={index}>
             <div className="flex">
-              <img className="imgProfil" src={profilPicture} alt="" />
+              <img
+                className="imgProfil"
+                src={`/images/${proItem.profilePicture}`}
+                alt={proItem.profilePicture}
+              />
               <div>
                 <h3 className="proName">{proItem.firstname}</h3>
-                <p> {proItem.profession}</p>
+                <p> {proItem.profession} </p>
               </div>
               <div>
                 <h3 className="price"> {proItem.price} €</h3>

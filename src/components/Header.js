@@ -20,7 +20,7 @@ function Header(props) {
         </header>
         <div className="right">
           <div className="title3">
-            <p>Devenir auxiliaire de vie </p>
+            <p className="rightP">Devenir auxiliaire de vie </p>
           </div>
           <div className="icon1">
             <BurgerMenu />

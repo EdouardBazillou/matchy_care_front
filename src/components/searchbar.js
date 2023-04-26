@@ -77,7 +77,7 @@ function SearchBar(props) {
           <option value="driving">Transport</option>
         </select>
         {/* select de test */}
-        <div class="multiselect">
+        {/* <div class="multiselect">
           <div className="selectBox" onClick={showCheckboxes}>
             <select className="search_input" name="besoin">
               <option>Choix</option>
@@ -116,7 +116,7 @@ function SearchBar(props) {
               Entretien
             </label>
           </div>
-        </div>
+        </div> */}
       </div>
       <hr></hr>
       <ReactDatePicker selected={date} onChange={setDate} />
