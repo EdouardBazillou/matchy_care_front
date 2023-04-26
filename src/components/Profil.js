@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AppointmentScheduler from "./Appointment";
 import profilPicture from "./pictures/exemple.png";
+import Header from "./Header";
+import "./Appointment.css";
 
 function Profil() {
   const { id } = useParams();
@@ -34,7 +36,7 @@ function Profil() {
         return (
           <div key={index}>
             <div className="flex">
-              <img src={profilPicture} alt="" />
+              <img className="imgProfil" src={profilPicture} alt="" />
               <div>
                 <h3 className="proName">{proItem.firstname}</h3>
                 <p> {proItem.profession}</p>
@@ -50,10 +52,13 @@ function Profil() {
   };
 
   return (
-    <div className="profil">
-      <div>{renderProfil()}</div>
-      <div>
-        <AppointmentScheduler />
+    <div>
+      <Header title="Prenez rendez-vous" />
+      <div className="profil">
+        <div>{renderProfil()}</div>
+        <div>
+          <AppointmentScheduler />
+        </div>
       </div>
     </div>
   );

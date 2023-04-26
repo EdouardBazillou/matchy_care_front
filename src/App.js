@@ -7,6 +7,7 @@ import Profil from "./components/Profil";
 import Login from "./users/login";
 import RegisterPatient from "./users/registerPatient";
 import RegisterPro from "./users/RegisterPro";
+import TestStripe from "./components/testStripe";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/professional/:id",
     element: <Profil />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/stripe",
+    element: <TestStripe />,
     errorElement: <Error />,
   },
 ]);

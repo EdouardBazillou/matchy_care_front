@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./RegisterPro.css";
-import BurgerMenu from "../components/burgerMenu";
+import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 
 function RegisterPro() {
@@ -63,28 +63,7 @@ function RegisterPro() {
 
   return (
     <div>
-      <div className="home">
-        <div className="title">
-          <h1>
-            <p>Matchy</p>
-            <p className="p2">Care</p>
-          </h1>
-        </div>
-        <div className="title2">
-          <h1>Réservez votre auxiliaire de vie idéal(e)</h1>
-        </div>
-        <div className="right">
-          <div className="title3">
-            <p>Devenir auxiliaire de vie </p>
-          </div>
-          <div className="icon1">
-            <BurgerMenu />
-            <div className="icon2">
-              <Link to="/profile" className="profilLink"></Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Header title="Contactez-nous" />
       <div className="formPro">
         <form>
           <h2 className="header">Inscription</h2>

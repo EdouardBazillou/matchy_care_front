@@ -17,23 +17,7 @@ const AppointmentScheduler = () => {
   };
 
   return (
-    <div>
-      <div className="home">
-        <div className="title">
-          <h1>
-            <p>Matchy</p>
-            <p className="p2">Care</p>
-          </h1>
-        </div>
-        <div className="title2">
-          <h1>Votre rendez-vous</h1>
-        </div>
-        <div className="right"></div>
-      </div>
-      <div className="Price" type="text">
-        <p className="Price1">A partir de </p>
-        <p className="Price2">Déduction împot </p>
-      </div>
+    <div className="rdv">
       <Calendrier />
       <div className="containerTime">
         <h3>Horaires</h3>
