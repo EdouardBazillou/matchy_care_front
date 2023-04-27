@@ -64,7 +64,7 @@ const AppointmentScheduler = () => {
             </button>
           </div>
         )}
-      </div>{" "}
+      </div>
     </div>
   );
 };
