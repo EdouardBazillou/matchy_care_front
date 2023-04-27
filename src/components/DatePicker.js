@@ -14,6 +14,8 @@ function ReactDatePicker() {
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         formatDate="dd/MM/yyyy"
+        showTimeSelect
+        timeFormat="p"
         minDate={new Date()}
         locale={fr}
       />

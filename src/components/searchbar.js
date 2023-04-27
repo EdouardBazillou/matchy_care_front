@@ -52,7 +52,7 @@ function SearchBar(props) {
       <hr></hr>
       <div className="input-search2">
         <label className="title-input-search" for="inputBesoin">
-          Besoin
+          Besoins
         </label>
         <select
           className="search_input"
@@ -63,10 +63,8 @@ function SearchBar(props) {
           <option value="" disabled selected hidden>
             Comment peut-on vous aider ?
           </option>
-          <option name="mobility" value="Mobility">
-            Mobility
-          </option>
-          /<option value="cooking">Repas</option>
+          <option value="Mobility">Mobilité</option>/
+          <option value="cooking">Repas</option>
           <option value="houseCleaning">Entretien</option>
           <option value="dressing">Change</option>
           <option value="reeducation">Rééducation</option>

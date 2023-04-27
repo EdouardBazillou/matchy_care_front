@@ -143,13 +143,13 @@ function FetchAccueil() {
           >
             <FaAccessibleIcon />
           </button>
-          <p> mobilite</p>
+          <p>Mobilité</p>
         </div>
         <div>
           <button className="icones" onClick={() => updateskill("cooking")}>
             <MdSoupKitchen />
           </button>
-          <p className="skills">repas</p>
+          <p className="skills">Repas</p>
         </div>
         <div>
           <button
@@ -158,7 +158,7 @@ function FetchAccueil() {
           >
             <MdOutlineCleaningServices />
           </button>
-          <p className="skills">Entretient</p>
+          <p className="skills">Entretien</p>
         </div>
         <div>
           <button className="icones" onClick={() => updateskill("dressing")}>
