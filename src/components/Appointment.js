@@ -18,6 +18,10 @@ const AppointmentScheduler = () => {
 
   return (
     <div className="rdv">
+      <div className="Price">
+        <p>A partir de</p>
+        <p> € /heure</p>
+      </div>
       <Calendrier />
       <div className="containerTime">
         <h3>Horaires</h3>
