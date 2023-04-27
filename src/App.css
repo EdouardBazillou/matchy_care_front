@@ -166,7 +166,7 @@ a {
   transform-origin: center;
 }
 .icones:hover {
-  border: 0.1em solid rgb(72, 71, 71);
+  border: 0.12em solid rgb(131, 142, 189);
 }
 .skills {
   font-weight: bolder;

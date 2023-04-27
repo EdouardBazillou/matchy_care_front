@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Header(props) {
+  const account = JSON.parse(localStorage.getItem("account"));
   return (
     <div>
       <div className="home">
@@ -20,9 +21,21 @@ function Header(props) {
         </header>
         <div className="right">
           <div className="title3">
-            <p className="rightP">
-              <Link to="/contact-admin">Devenir auxiliaire de vie</Link>
-            </p>
+            {account === "admin" ? (
+              <Link to="/patients" className="rightP">
+                Consultez la liste des patients
+              </Link>
+            ) : account === "professional" ? (
+              <Link to="/appointments" className="rightP">
+                Consulter vos rendez-vous
+              </Link>
+            ) : account === "patient" ? (
+              <Link to="/appointments" className="rightP">
+                Consulter vos rendez-vous
+              </Link>
+            ) : (
+              <p className="rightP">Devenir auxiliaire de vie</p>
+            )}
           </div>
           <div className="icon1">
             <BurgerMenu />
