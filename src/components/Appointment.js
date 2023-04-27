@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Appointment.css";
-import ClickableCalendar from "./Calendar";
 import Calendrier from "./Calendar";
 
 const AppointmentScheduler = () => {
