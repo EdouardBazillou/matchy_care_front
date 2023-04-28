@@ -166,7 +166,7 @@ a {
   transform-origin: center;
 }
 .icones:hover {
-  border: 0.1em solid rgb(72, 71, 71);
+  border: 0.12em solid rgb(131, 142, 189);
 }
 .skills {
   font-weight: bolder;
@@ -342,4 +342,15 @@ h4 {
 
 #checkboxes label:hover {
   background-color: rgb(131, 142, 189);
+}
+
+.Price {
+  border: solid black 1px;
+  margin-left: 30%;
+  text-align: center;
+  border-radius: 1em;
+  width: 50%;
+  box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+  font-weight: bolder;
+  font-size: larger;
 }

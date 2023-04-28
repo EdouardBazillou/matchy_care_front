@@ -8,6 +8,7 @@ import Login from "./users/login";
 import RegisterPatient from "./users/registerPatient";
 import RegisterPro from "./users/RegisterPro";
 import TestStripe from "./components/testStripe";
+import SendProInfo from "./components/admin/sendProInfo";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
   {
     path: "/stripe",
     element: <TestStripe />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/contact-admin",
+    element: <SendProInfo />,
     errorElement: <Error />,
   },
 ]);
