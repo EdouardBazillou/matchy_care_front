@@ -10,14 +10,19 @@ const AppointmentScheduler = () => {
     setSelectedTime(time);
   };
 
+  const onChange = (date) => {
+    setSelectDate(date);
+    console.log(date);
+  };
+
   const handleAppointmentBooking = () => {
     // ici vous pouvez utiliser la plage horaire sélectionnée pour réserver un rendez-vous
-    console.log("Rendez-vous réservé pour ", selectedTime);
+    console.log("Rendez-vous réservé pour ", selectedTime, selectDate);
   };
 
   return (
     <div className="rdv">
-      <Calendrier />
+      <Calendrier action={onChange} />
       <div className="containerTime">
         <h3>Horaires</h3>
         <div className="Timer">
