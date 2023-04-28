@@ -33,12 +33,28 @@ function Login() {
         password: user.password,
       }),
     };
-    await fetch(`http://127.0.0.1:8000/api/login`, options).then((response) => {
-      console.log(response);
-      if (response.status === 200) {
+    await fetch(`http://127.0.0.1:8000/api/login`, options)
+      .then((response) => {
+        if (response.ok) {
+          return response.json(); // Convertit la réponse en JSON
+        }
+        throw new Error("Adresse email ou mot de passe incorrect.");
+      })
+      .then((data) => {
+        // Traitez les données JSON ici
+        console.log(data);
         navigate("/");
-      }
-    });
+        // Utilisez la réponse JSON ici
+        // console.log(data.message);
+        // console.log(data.email);
+        console.log(data.account);
+        // on envoie le type de compte en local storage pour identifier le type de connexion
+        localStorage.setItem("account", JSON.stringify(data.account));
+      })
+      .catch((error) => {
+        // Gérez les erreurs ici
+        console.error(error.message);
+      });
   };
 
   return (

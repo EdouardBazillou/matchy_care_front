@@ -35,7 +35,7 @@ function Profil() {
       return pro.map((proItem, index) => {
         return (
           <div key={index}>
-            <div className="flex">
+            <div className="flex2">
               <img
                 className="imgProfil"
                 src={`/images/${proItem.profilePicture}`}
@@ -72,7 +72,7 @@ function Profil() {
       <Header title="Prenez rendez-vous" />
       <div className="profil">
         <div>{renderProfil()}</div>
-        <div>
+        <div className="agenda">
           <AppointmentScheduler />
         </div>
       </div>
