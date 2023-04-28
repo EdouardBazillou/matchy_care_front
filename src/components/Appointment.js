@@ -1,61 +1,34 @@
 import React, { useState } from "react";
 import "./Appointment.css";
-import Calendrier from "./Calendar";
+import ReactDatePicker from "./DatePicker";
 
 const AppointmentScheduler = () => {
   const [selectedTime, setSelectedTime] = useState([]);
   const [selectDate, setSelectDate] = useState([]);
+  //Variable d'état pour gestion de la disponibilité des plages horaires:
+  const [availableSlots, setAvailableSlots] = useState({});
 
-  const handleTimeClick = (time) => {
-    setSelectedTime(time);
-  };
-
-  const onChange = (date) => {
+  //Pour récupérer la date sur Calendrier - OK
+  const handleChange = (date) => {
     setSelectDate(date);
     console.log(date);
   };
 
-  const handleAppointmentBooking = () => {
-    // ici vous pouvez utiliser la plage horaire sélectionnée pour réserver un rendez-vous
-    console.log("Rendez-vous réservé pour ", selectedTime, selectDate);
+  //Fonction onClick pour confirmation RDV
+  const handleAppointmentBooking = (time) => {
+    setAvailableSlots({
+      ...availableSlots,
+      [selectDate]: availableSlots[selectDate],
+    });
+    alert("votre rdv est le " + { selectDate } + "à heure");
+    console.log("Rendez-vous réservé pour le : ", selectDate);
   };
 
   return (
     <div className="rdv">
-      <Calendrier action={onChange} />
       <div className="containerTime">
-        <h3>Horaires</h3>
         <div className="Timer">
-          <button className="buttonTime" onClick={() => handleTimeClick("8h")}>
-            8h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("9h")}>
-            9h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("10h")}>
-            10h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("11h")}>
-            11h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("13h")}>
-            13h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("14h")}>
-            14h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("15h")}>
-            15h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("16h")}>
-            16h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("17h")}>
-            17h
-          </button>
-          <button className="buttonTime" onClick={() => handleTimeClick("18h")}>
-            18h
-          </button>
+          <ReactDatePicker action={handleChange} />
         </div>
 
         {selectedTime && (
