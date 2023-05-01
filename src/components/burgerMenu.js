@@ -15,28 +15,28 @@ const BurgerMenu = () => {
     <div className="menu">
       {/* Bouton du burger menu */}
       <button className={isOpen ? "open" : ""} onClick={handleBurgerClick}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span className="burger-lines"></span>
+        <span className="burger-lines"></span>
+        <span className="burger-lines"></span>
       </button>
 
       {/* Menu affiché/masqué en fonction de l'état */}
       {isOpen && (
-        <nav className="span">
+        <nav>
           <ul>
             <li>
               <Link to="/registerPatient" className="links">
-                m'inscrire en tant que patient
+                M'inscrire en tant que patient
               </Link>
             </li>
             <li>
               <Link to="/registerPro" className="links">
-                m'inscrire en tant que pro
+                M'inscrire en tant que pro
               </Link>
             </li>
             <li>
               <Link to="/login" className="links">
-                me connecter
+                Se connecter
               </Link>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [user, setUser] = useState({
@@ -50,6 +51,7 @@ function Login() {
         console.log(data.account);
         // on envoie le type de compte en local storage pour identifier le type de connexion
         localStorage.setItem("account", JSON.stringify(data.account));
+        localStorage.setItem("id", JSON.stringify(data.id));
       })
       .catch((error) => {
         // Gérez les erreurs ici
@@ -85,6 +87,7 @@ function Login() {
         <button type="submit" className="log">
           Me connecter
         </button>
+        <Link to="/password-reset">Mot de passe oublié ?</Link>
       </form>
     </div>
   );

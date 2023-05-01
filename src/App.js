@@ -9,6 +9,7 @@ import RegisterPatient from "./users/registerPatient";
 import RegisterPro from "./users/RegisterPro";
 import TestStripe from "./components/testStripe";
 import SendProInfo from "./components/admin/sendProInfo";
+import PasswordReset from "./components/password-reset/passwordReset";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
   {
     path: "/contact-admin",
     element: <SendProInfo />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/password-reset",
+    element: <PasswordReset />,
     errorElement: <Error />,
   },
 ]);

@@ -34,7 +34,9 @@ function Header(props) {
                 Consulter vos rendez-vous
               </Link>
             ) : (
-              <p className="rightP">Devenir auxiliaire de vie</p>
+              <p className="rightP">
+                <Link to="/contact-admin"> Devenir auxiliaire de vie</Link>
+              </p>
             )}
           </div>
           <div className="icon1">

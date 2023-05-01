@@ -1,0 +1,55 @@
+.profile-main-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+.profile-first-column {
+  display: flex;
+  flex-direction: column;
+}
+.profile-second-column {
+  display: flex;
+  flex-direction: column;
+}
+.profile-discount {
+  color: rgb(128, 143, 193);
+}
+.profile-initial-price {
+  text-decoration: line-through;
+}
+.profile-price {
+  border: black solid 1px;
+  border-radius: 30px;
+  padding: 0 10%;
+  text-align: right;
+  width: 15em;
+}
+.profile-pro-details {
+  text-align: left;
+  margin-bottom: 15%;
+}
+.profile-pro-details > * {
+  margin: 0;
+}
+#profile-city {
+  text-decoration: underline;
+}
+
+.profile-agenda {
+  display: flex;
+  justify-content: end;
+  margin-right: 15%;
+}
+/* style icones skills profil pro */
+.skills-hidden {
+  display: none;
+}
+.flex-skills {
+  display: flex;
+  flex-direction: row;
+}
+.flex-skills button {
+  margin-right: 2%;
+  height: 7vh;
+  width: 4vw;
+}

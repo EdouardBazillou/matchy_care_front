@@ -5,8 +5,10 @@ import Header from "../Header";
 function SendProInfo() {
   return (
     <div>
-      <Header />
-      <h1 className="contact-admin-title">Contacter l'administrateur</h1>
+      <Header title="Contacter l'administrateur" />
+      <h3 className="contact-admin-title">
+        Renseignez vos informations de contact
+      </h3>
       <form action="" method="post" className="contact-admin-form">
         <label htmlFor="lastname">Nom de famille:</label>
         <input type="text" name="lastname" id="lastname" />

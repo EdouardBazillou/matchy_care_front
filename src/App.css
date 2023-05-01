@@ -1,16 +1,15 @@
 .home {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-around;
+  align-items: center;
   gap: 12%;
+  justify-content: space-around;
 }
 
 .title {
   font-size: 12px;
   line-height: 8px;
   background-color: rgb(131, 142, 189);
-
   border-radius: 50%;
   display: flex;
   margin: 0%;
@@ -56,7 +55,7 @@
   gap: 3%;
   border: solid;
   border-width: 1px;
-  border-radius: 30%;
+  border-radius: 50px;
   padding: 1%;
 }
 
@@ -251,7 +250,7 @@ input.Email {
 }
 .log {
   border-radius: 7%;
-  background-color: cornflowerblue;
+  background-color: rgb(128, 143, 193);
   border: none;
   color: white;
   /*couleur du texte du bouton*/
@@ -278,12 +277,9 @@ h4 {
 }
 .formu {
   text-align: center;
-  margin-top: 15%;
   border: 1px solid black;
   border-radius: 22px;
-  margin-left: 29%;
-  margin-right: 32%;
-  padding: 42px;
+  margin: 3% 30%;
 }
 .info {
   border-radius: 6px;
@@ -291,7 +287,7 @@ h4 {
 }
 .compte {
   border-radius: 7%;
-  background-color: cornflowerblue;
+  background-color: rgb(128, 143, 193);
   border: none;
   color: white;
   /*couleur du texte du bouton*/

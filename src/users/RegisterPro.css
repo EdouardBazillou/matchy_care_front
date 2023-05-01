@@ -15,8 +15,8 @@
 .header {
   position: relative;
   background-clip: border-box;
-  background-color: rgb(131, 142, 189);
-  background-image: linear-gradient(to top right, #5e99c5, #5e99c5);
+  background-color: rgb(128, 143, 193);
+  /* background-image: linear-gradient(to top right, #5e99c5, #5e99c5); */
   margin: 10px;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -70,8 +70,8 @@
   line-height: 1rem;
   text-align: center;
   padding: 0.75rem 1.5rem;
-  background-color: rgb(131, 142, 189);
-  background-image: linear-gradient(to top right, #5e99c5, #5e99c5);
+  background-color: rgb(128, 143, 193);
+  /* background-image: linear-gradient(to top right, #5e99c5, #5e99c5); */
   border-radius: 0.5rem;
   width: 100%;
   outline: 0;
