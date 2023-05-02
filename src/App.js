@@ -10,6 +10,7 @@ import RegisterPro from "./users/RegisterPro";
 import TestStripe from "./components/testStripe";
 import SendProInfo from "./components/admin/sendProInfo";
 import MonProfil from "./components/MonProfil";
+import PasswordReset from "./components/password-reset/passwordReset";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
   {
     path: "/MonProfil",
     element: <MonProfil />,
+    path: "/password-reset",
+    element: <PasswordReset />,
     errorElement: <Error />,
   },
 ]);

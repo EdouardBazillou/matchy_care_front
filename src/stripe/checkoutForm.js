@@ -3,6 +3,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 //Utilisation d'AXIOS
 //commande npm à activer : npm install @stripe/react-stripe-js @stripe/stripe-js axios
 import axios from "axios";
+import "../stripe/stripeForm.css";
 
 //création du composant avec les hooks qui permettent d'accéder aux éléments de la card :
 export const CheckoutForm = () => {
@@ -43,13 +44,17 @@ export const CheckoutForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
+    <form
+      className="payStripe"
+      onSubmit={handleSubmit}
+      style={{ maxWidth: 400 }}
+    >
       <CardElement
         options={{
           hidePostalCode: true,
         }}
       />
-      <button type="submit" disabled={!stripe}>
+      <button className="buttonStripe" type="submit" disabled={!stripe}>
         payer
       </button>
     </form>
