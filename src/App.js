@@ -9,6 +9,7 @@ import RegisterPatient from "./users/registerPatient";
 import RegisterPro from "./users/RegisterPro";
 import TestStripe from "./components/testStripe";
 import SendProInfo from "./components/admin/sendProInfo";
+import MonProfil from "./components/MonProfil";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
   {
     path: "/contact-admin",
     element: <SendProInfo />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/MonProfil",
+    element: <MonProfil />,
     errorElement: <Error />,
   },
 ]);

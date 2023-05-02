@@ -39,6 +39,11 @@ const BurgerMenu = () => {
                 me connecter
               </Link>
             </li>
+            <li>
+              <Link to="/MonProfil" className="links">
+                mon profil
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
